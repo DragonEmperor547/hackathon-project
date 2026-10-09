@@ -14,6 +14,7 @@ export const light = {
   // Home "next class" hero (mockups 01 / 11)
   heroBg: '#2343C4', heroBorder: '#2343C4', heroDecor: '#FFFFFF', heroPill: 'rgba(255,255,255,0.16)',
   heroPillInk: '#FFFFFF', heroInk: '#DCE4FF',
+  inputBg: '#F7F8FB', onInverseMuted: '#C3CAD6', grabber: '#DCE1EA',
 };
 
 export type Colors = typeof light;
@@ -31,6 +32,7 @@ export const dark: Colors = {
   onColorSoft: 'rgba(255,255,255,0.16)',
   heroBg: '#1D2A5E', heroBorder: '#2E3E7E', heroDecor: '#7C9CFF', heroPill: 'rgba(124,156,255,0.2)',
   heroPillInk: '#C3D1FF', heroInk: '#C3D1FF',
+  inputBg: '#1C2130', onInverseMuted: '#C3CAD6', grabber: '#2E3445',
 };
 
 export type CourseColors = { solid: string; soft: string; ink: string; hero: string };
