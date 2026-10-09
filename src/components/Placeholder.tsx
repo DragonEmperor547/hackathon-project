@@ -2,10 +2,13 @@ import { Link, router } from 'expo-router';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 // Temporary Phase 1.1 screen body. Delete once every screen is built.
-export function Placeholder({ title, links = [] }: { title: string; links?: string[] }) {
+export function Placeholder({ title, lines = [], links = [] }: { title: string; lines?: string[]; links?: string[] }) {
   return (
     <View style={styles.root}>
       <Text style={styles.title}>{title}</Text>
+      {lines.map((line) => (
+        <Text key={line}>{line}</Text>
+      ))}
       {links.map((href) => (
         <Link key={href} href={href as never} style={styles.link}>
           {href}
