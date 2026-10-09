@@ -192,7 +192,7 @@ Due dates are **relative to today** so the demo never looks stale (`addDays(star
 | id | title | course | due (days from today) | priority | status |
 |---|---|---|---|---|---|
 | t1 | ER diagram for library DB | cs302 | +1 | high | pending |
-| t2 | Assignment 2: Build a Todo screen | cs311 | +2 | medium | pending |
+| t2 | Assignment 2: Todo screen | cs311 | +2 | medium | pending |
 | t3 | Problem set 4 | mt201 | +4 | low | pending |
 | t4 | Quiz 3 prep: Navigation | cs311 | +6 | low | pending |
 | t5 | Lab report: Process scheduling | cs305 | −2 | medium | completed |

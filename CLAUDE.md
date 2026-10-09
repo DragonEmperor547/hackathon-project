@@ -8,6 +8,7 @@ Read these before writing code (they are the source of truth):
 - @docs/DATA_MODEL.md — types, store, mock data, selectors
 - @docs/DESIGN.md — theme tokens, typography, components, screen layouts
 - @docs/BUILD_PLAN.md — phases, ownership, git rules, test checklist
+- @docs/MOCKUPS.md — **the mockups in docs/mockups/ are binding.** Read a screen's PNG + HTML before building it and match it exactly (only the exceptions listed in MOCKUPS.md differ)
 
 ## Guiding principle
 **A smooth, working, connected core beats a long list of half-finished features.**
@@ -33,7 +34,7 @@ Install packages with `npx expo install <pkg>` (keeps versions compatible with t
 4. **No derived arrays inside the Zustand selector.** `useAppStore(s => s.tasks.filter(...))` causes infinite re-renders.
    Select raw values, then derive with `useMemo` or use helpers from `src/lib/selectors.ts`.
 5. **Dates are ISO strings** in data and store. Parse with `date-fns` (`parseISO`) only when computing/displaying.
-6. **Colors come from the theme** (`useTheme()`), never hard-coded hex in screens. Course colors come from `courseColor(courseId, scheme)`.
+6. **Colors come from the theme** (`useTheme()`), never hard-coded hex in screens. Course colors come from `useTheme().courseColor(courseId)`. Text styles come from `type.*` in `src/theme/tokens.ts`; never set `fontWeight` with the custom fonts (use `fonts.*` families).
 7. **Every screen except tab roots has a back button** (`<BackButton />` → `router.back()`, falls back to `/` when `!router.canGoBack()`). The Notices tab also shows a back button.
 8. Keep files small and owned: one screen per file in `app/`, shared UI in `src/components/`. Don't edit files outside your task's scope; never change `src/types.ts` or the store shape unless the task says so.
 9. Touch targets ≥ 44px, real `Pressable`s with `accessibilityRole` and `accessibilityLabel` on icon-only buttons.
@@ -42,7 +43,7 @@ Install packages with `npx expo install <pkg>` (keeps versions compatible with t
 ## Folder structure
 ```
 app/
-  _layout.tsx            # root Stack, fonts, hydration gate, ThemeProvider
+  _layout.tsx            # root Stack, fonts, hydration gate, StatusBar
   (tabs)/_layout.tsx     # bottom tabs: Home, Schedule, Tasks, Courses, Notices (+unread badge)
   (tabs)/index.tsx       # Home dashboard
   (tabs)/schedule.tsx
@@ -60,7 +61,7 @@ src/
   data/student.ts courses.ts sessions.ts notices.ts seedTasks.ts
   store/useAppStore.ts
   lib/selectors.ts dates.ts ids.ts useNow.ts
-  theme/tokens.ts ThemeProvider.tsx
+  theme/tokens.ts useTheme.ts
   components/*.tsx
 ```
 

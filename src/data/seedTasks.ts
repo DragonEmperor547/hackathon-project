@@ -6,7 +6,7 @@ type Seed = [id: string, title: string, courseId: string, dueInDays: number, pri
 const SEEDS: Seed[] = [
   ['t1', 'ER diagram for library DB', 'cs302', 1, 'high', false,
     'Draw the ER diagram for the library database: members, books, copies, loans and fines. Mark primary keys and cardinalities, then submit a PDF on the LMS.'],
-  ['t2', 'Assignment 2: Build a Todo screen', 'cs311', 2, 'medium', false,
+  ['t2', 'Assignment 2: Todo screen', 'cs311', 2, 'medium', false,
     'Build a Todo screen in React Native that adds, completes and deletes items. Use a FlatList and keep state in a store. Record a 1-minute screen capture.'],
   ['t3', 'Problem set 4', 'mt201', 4, 'low', false,
     'Questions 1–12 from chapter 4 on discrete random variables. Show all working and upload a scanned copy.'],

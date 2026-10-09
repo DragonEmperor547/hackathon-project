@@ -49,7 +49,7 @@ export const courseColors = {
 export const radius = { sm: 10, md: 14, lg: 18, xl: 20, xxl: 24, pill: 999 };
 export const space = { xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 24 }; // screen side padding = 20
 ```
-`ThemeProvider` resolves `themeMode` ('system' uses `useColorScheme()`) and exposes `{ c, scheme, course(colorKey) }` via `useTheme()`. Set `StatusBar` style to match.
+`useTheme()` (src/theme/useTheme.ts) resolves `themeMode` from the store ('system' uses `useColorScheme()`) and returns `{ c, scheme, courseColor(courseId) }`; `courseColor(null)` gives neutral greys for General tasks. No provider needed. Root layout sets `StatusBar` to match. Text styles: `type.display / hero / section / eyebrow / title / body / meta / pill` and `fonts.*` in tokens.ts.
 
 ## Typography
 | Role | Font | Size / weight | Use |
