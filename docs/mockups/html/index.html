@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus Companion mockups</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+body{margin:0;background:#F3F5F9;color:#101828;font-family:'Plus Jakarta Sans',system-ui,sans-serif;padding:40px 24px}
+h1{font-family:'Bricolage Grotesque',sans-serif;font-size:34px;margin:0 0 6px}
+p{margin:0 0 28px;color:#5B6475}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;max-width:1300px}
+.card{display:flex;flex-direction:column;gap:6px;padding:14px;border-radius:20px;background:#fff;border:1px solid #E3E7EF;text-decoration:none;color:inherit}
+.card:hover{border-color:#2F5BEA}
+.card img{width:100%;height:340px;object-fit:contain;object-position:top}
+.t{font-weight:700}.r{font-size:12px;color:#5B6475;font-family:ui-monospace,Menlo,monospace}
+</style></head><body>
+<h1>Campus Companion — UI mockups</h1>
+<p>Click a screen to open its HTML reference. Images and HTML live in docs/mockups/.</p>
+<div class="grid">
+<a class="card" href="01-home.html"><img src="../01-home.png" alt="Home dashboard mockup"><span class="t">Home dashboard</span><span class="r">app/(tabs)/index.tsx</span></a>
+<a class="card" href="02-schedule.html"><img src="../02-schedule.png" alt="Schedule mockup"><span class="t">Schedule</span><span class="r">app/(tabs)/schedule.tsx</span></a>
+<a class="card" href="03-class-detail.html"><img src="../03-class-detail.png" alt="Class detail mockup"><span class="t">Class detail</span><span class="r">app/class/[id].tsx</span></a>
+<a class="card" href="04-tasks.html"><img src="../04-tasks.png" alt="Tasks mockup"><span class="t">Tasks</span><span class="r">app/(tabs)/tasks.tsx</span></a>
+<a class="card" href="05-task-detail.html"><img src="../05-task-detail.png" alt="Task detail mockup"><span class="t">Task detail</span><span class="r">app/task/[id].tsx</span></a>
+<a class="card" href="06-task-form.html"><img src="../06-task-form.png" alt="Add / edit task mockup"><span class="t">Add / edit task</span><span class="r">app/task-form.tsx</span></a>
+<a class="card" href="07-courses.html"><img src="../07-courses.png" alt="My courses mockup"><span class="t">My courses</span><span class="r">app/(tabs)/courses.tsx</span></a>
+<a class="card" href="08-course-detail.html"><img src="../08-course-detail.png" alt="Course detail mockup"><span class="t">Course detail</span><span class="r">app/course/[id].tsx</span></a>
+<a class="card" href="09-notices.html"><img src="../09-notices.png" alt="Campus notices mockup"><span class="t">Campus notices</span><span class="r">app/(tabs)/notices.tsx</span></a>
+<a class="card" href="10-notice-detail.html"><img src="../10-notice-detail.png" alt="Notice detail mockup"><span class="t">Notice detail</span><span class="r">app/notice/[id].tsx</span></a>
+<a class="card" href="11-home-dark.html"><img src="../11-home-dark.png" alt="Home, dark mode mockup"><span class="t">Home, dark mode</span><span class="r">dark theme reference</span></a>
+<a class="card" href="12-colour-schemes.html"><img src="../12-colour-schemes.png" alt="Colour schemes mockup"><span class="t">Colour schemes</span><span class="r">theme tokens reference</span></a>
+</div></body></html>

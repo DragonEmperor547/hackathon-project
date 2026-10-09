@@ -39,7 +39,7 @@ Run these one at a time; review each result.
 > Implement src/types.ts, all files in src/data/, src/lib/ids.ts, src/lib/dates.ts, src/lib/selectors.ts and src/store/useAppStore.ts exactly as specified in docs/DATA_MODEL.md (mock values included). Seed task dates must be relative to today. Add a quick sanity check by logging nothing — instead show counts on the placeholder Home screen (classes today, pending tasks, unread notices) so we can see the data flows. Run `npx tsc --noEmit`.
 
 **Prompt 1.3 — theme, layout, tabs, components**
-> Implement src/theme (tokens + ThemeProvider + useTheme with light/dark/system from the store), load fonts in app/_layout.tsx and keep the splash screen until fonts are loaded AND the store has hydrated. Build the bottom tab layout per docs/DESIGN.md (active pill, Feather icons, Notices badge = live unread count). Then build ALL shared components listed in DESIGN.md in src/components/ (Screen, ScreenHeader, BackButton, IconButton, Card, Pill, SectionHeader, CheckCircle, TaskRow, ClassCard, MiniClassCard, CourseBadge, ProgressRing, ProgressBar, SegmentedControl, ChipGroup, EmptyState, HeroCard, FloorMap, Fab). Register stack screens: class/[id], course/[id], task/[id], task-form (modal), notice/[id], settings — all with headerShown: false.
+> Implement src/theme (tokens + ThemeProvider + useTheme with light/dark/system from the store), load fonts in app/_layout.tsx and keep the splash screen until fonts are loaded AND the store has hydrated. Build the bottom tab layout per docs/DESIGN.md (active pill, Feather icons, Notices badge = live unread count). Then build the shared components every screen needs in src/components/ (Screen, ScreenHeader, BackButton, IconButton, Card, Pill, SectionHeader, CheckCircle, TaskRow, SegmentedControl, ChipGroup). The rest (ClassCard, MiniClassCard, CourseBadge, ProgressRing, ProgressBar, EmptyState, HeroCard, FloorMap, Fab) are built in Phase 2 by whoever needs them first, following DESIGN.md. Register stack screens: class/[id], course/[id], task/[id], task-form (modal), notice/[id], settings — all with headerShown: false.
 
 ✅ Push to `main` → tell the team. Everyone pulls.
 
@@ -88,7 +88,7 @@ Run these one at a time; review each result.
 
 ## Phase 5 — README & demo
 **Prompt 5.1**
-> Write README.md: one-paragraph pitch, features list mapped to the 6 core areas, enhancements built, tech stack, how to run (Node LTS, `npm install`, `npx expo start`, scan QR with Expo Go; or press `w` for web), project structure, data/persistence notes (mock data, AsyncStorage, Reset demo data in Settings), team members, and credits (fonts: Google Fonts OFL; icons: Feather via @expo/vector-icons).
+> Write README.md: one-paragraph pitch, features list mapped to the 6 core areas, enhancements built, tech stack, how to run (Node LTS, `npm install`, `npx expo start`, scan QR with Expo Go; web preview works except the task date picker, which is native-only), project structure, data/persistence notes (mock data, AsyncStorage, Reset demo data in Settings), team members, and credits (fonts: Google Fonts OFL; icons: Feather via @expo/vector-icons).
 
 Demo recording: reset demo data first, follow the storyline in SPEC.md, 3–5 minutes, one narrator.
 

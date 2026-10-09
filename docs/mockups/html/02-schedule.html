@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus Companion mockup: Schedule</title>
+<!--
+  Campus Companion UI mockup — Schedule
+  Build target: app/(tabs)/schedule.tsx
+  Static reference only (no app logic). Match layout, hierarchy, spacing, colours and shapes.
+  Colours map to theme tokens in docs/DESIGN.md. Data shown is the mock data in docs/DATA_MODEL.md.
+  Phone frame is 390 px wide; build with flexible widths in React Native, not fixed pixels.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+
+body{margin:0}
+a{color:#2F5BEA}a:hover{color:#1E3FAE}
+
+html, body { margin: 0; }
+body { background: #CDD3DE; display: flex; justify-content: center; padding: 32px 16px; }
+.phone-frame { border-radius: 40px; overflow: hidden; box-shadow: 0 20px 60px rgba(16,24,40,0.25); }
+</style>
+</head>
+<body>
+<div class="phone-frame">
+<div style="width: 390px; height: 900px; box-sizing: border-box; background: #F3F5F9; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #101828; display: flex; flex-direction: column; overflow: hidden">
+<main style="flex: 1; padding: 56px 20px 24px; display: flex; flex-direction: column; gap: 18px; min-height: 0">
+
+<header style="display: flex; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 12px; font-weight: 700; color: #5B6475; letter-spacing: 0.06em; text-transform: uppercase">Week 6 · Fall 2026</span>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -0.02em">Schedule</h1>
+</div>
+<span style="padding: 7px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E3E7EF; font-size: 12px; font-weight: 700; color: #3D4555">5 – 9 Oct</span>
+</header>
+
+<div role="group" aria-label="Pick a day" style="display: flex; gap: 8px">
+
+<button aria-pressed="false" style="flex: 1; height: 72px; border-radius: 18px; border: 1px solid #E3E7EF; background: #FFFFFF; color: #101828; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-family: inherit; cursor: pointer; padding: 0">
+<span style="font-size: 12px; font-weight: 600">Mon</span>
+<span style="font-size: 19px; font-weight: 700">5</span>
+<span style="width: 5px; height: 5px; border-radius: 3px; background: transparent"></span>
+</button>
+
+<button aria-pressed="false" style="flex: 1; height: 72px; border-radius: 18px; border: 1px solid #E3E7EF; background: #FFFFFF; color: #101828; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-family: inherit; cursor: pointer; padding: 0">
+<span style="font-size: 12px; font-weight: 600">Tue</span>
+<span style="font-size: 19px; font-weight: 700">6</span>
+<span style="width: 5px; height: 5px; border-radius: 3px; background: transparent"></span>
+</button>
+
+<button aria-pressed="false" style="flex: 1; height: 72px; border-radius: 18px; border: 1px solid #E3E7EF; background: #FFFFFF; color: #101828; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-family: inherit; cursor: pointer; padding: 0">
+<span style="font-size: 12px; font-weight: 600">Wed</span>
+<span style="font-size: 19px; font-weight: 700">7</span>
+<span style="width: 5px; height: 5px; border-radius: 3px; background: transparent"></span>
+</button>
+
+<button aria-pressed="false" style="flex: 1; height: 72px; border-radius: 18px; border: 1px solid #E3E7EF; background: #FFFFFF; color: #101828; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-family: inherit; cursor: pointer; padding: 0">
+<span style="font-size: 12px; font-weight: 600">Thu</span>
+<span style="font-size: 19px; font-weight: 700">8</span>
+<span style="width: 5px; height: 5px; border-radius: 3px; background: transparent"></span>
+</button>
+
+<button aria-pressed="true" style="flex: 1; height: 72px; border-radius: 18px; border: 1px solid #2343C4; background: #2343C4; color: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-family: inherit; cursor: pointer; padding: 0">
+<span style="font-size: 12px; font-weight: 600">Fri</span>
+<span style="font-size: 19px; font-weight: 700">9</span>
+<span style="width: 5px; height: 5px; border-radius: 3px; background: #F2A93B"></span>
+</button>
+
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: baseline">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 19px; font-weight: 700">Today · Friday</h2>
+<span style="font-size: 13px; color: #5B6475; font-weight: 500">4 classes · from 08:30</span>
+</div>
+
+<div style="position: relative; display: flex; flex-direction: column; gap: 12px">
+<span style="position: absolute; left: 57px; top: 8px; bottom: 8px; width: 2px; background: #DCE1EA"></span>
+
+<div style="position: relative; display: flex; gap: 16px">
+<div style="width: 44px; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; padding-top: 14px">
+<span style="font-size: 13px; font-weight: 700">08:30</span>
+<span style="font-size: 11px; color: #5B6475">10:00</span>
+</div>
+<span style="position: absolute; left: 53px; top: 18px; width: 10px; height: 10px; box-sizing: border-box; border-radius: 5px; background: #E2553C; border: 2px solid #E2553C"></span>
+<a href="ClassDetail.dc.html" style="flex: 1; margin-left: 8px; display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: 18px; background: #FFFFFF; border: 1px solid #E3E7EF; opacity: 0.6; color: #101828; text-decoration: none; min-width: 0">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+<span style="display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: #5B6475"><span style="width: 10px; height: 10px; border-radius: 3px; background: #E2553C"></span>CS-305 · Lecture</span>
+<span style="padding: 3px 8px; border-radius: 999px; background: #EEF1F6; color: #3D4555; font-size: 11px; font-weight: 700">Done</span>
+</div>
+<span style="font-size: 16px; font-weight: 700; line-height: 1.25">Operating Systems</span>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: #5B6475">
+<span style="display: flex; align-items: center; gap: 5px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Room 101</span>
+<span style="display: flex; align-items: center; gap: 5px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>Dr. Farhan Ahmed</span>
+</div>
+</a>
+</div>
+
+<div style="position: relative; display: flex; gap: 16px">
+<div style="width: 44px; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; padding-top: 14px">
+<span style="font-size: 13px; font-weight: 700">10:00</span>
+<span style="font-size: 11px; color: #5B6475">11:30</span>
+</div>
+<span style="position: absolute; left: 53px; top: 18px; width: 10px; height: 10px; box-sizing: border-box; border-radius: 5px; background: #FFFFFF; border: 2px solid #0E9384"></span>
+<a href="ClassDetail.dc.html" style="flex: 1; margin-left: 8px; display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: 18px; background: #FFFFFF; border: 2px solid #2F5BEA; opacity: 1; color: #101828; text-decoration: none; min-width: 0">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+<span style="display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: #5B6475"><span style="width: 10px; height: 10px; border-radius: 3px; background: #0E9384"></span>CS-311 · Lecture</span>
+<span style="padding: 3px 8px; border-radius: 999px; background: #E6ECFD; color: #2343C4; font-size: 11px; font-weight: 700">Next · 25 min</span>
+</div>
+<span style="font-size: 16px; font-weight: 700; line-height: 1.25">Mobile App Development</span>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: #5B6475">
+<span style="display: flex; align-items: center; gap: 5px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Lab 3, CS Block</span>
+<span style="display: flex; align-items: center; gap: 5px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>Dr. Sana Iqbal</span>
+</div>
+</a>
+</div>
+
+<div style="position: relative; display: flex; gap: 16px">
+<div style="width: 44px; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; padding-top: 14px">
+<span style="font-size: 13px; font-weight: 700">13:00</span>
+<span style="font-size: 11px; color: #5B6475">14:30</span>
+</div>
+<span style="position: absolute; left: 53px; top: 18px; width: 10px; height: 10px; box-sizing: border-box; border-radius: 5px; background: #FFFFFF; border: 2px solid #D98A12"></span>
+<a href="ClassDetail.dc.html" style="flex: 1; margin-left: 8px; display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: 18px; background: #FFFFFF; border: 1px solid #E3E7EF; opacity: 1; color: #101828; text-decoration: none; min-width: 0">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+<span style="display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: #5B6475"><span style="width: 10px; height: 10px; border-radius: 3px; background: #D98A12"></span>MT-201 · Lecture</span>
+
+</div>
+<span style="font-size: 16px; font-weight: 700; line-height: 1.25">Probability &amp; Statistics</span>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: #5B6475">
+<span style="display: flex; align-items: center; gap: 5px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Room 305</span>
+<span style="display: flex; align-items: center; gap: 5px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>Ms. Hira Saleem</span>
+</div>
+</a>
+</div>
+
+<div style="position: relative; display: flex; gap: 16px">
+<div style="width: 44px; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; padding-top: 14px">
+<span style="font-size: 13px; font-weight: 700">15:00</span>
+<span style="font-size: 11px; color: #5B6475">16:00</span>
+</div>
+<span style="position: absolute; left: 53px; top: 18px; width: 10px; height: 10px; box-sizing: border-box; border-radius: 5px; background: #FFFFFF; border: 2px solid #2F5BEA"></span>
+<a href="ClassDetail.dc.html" style="flex: 1; margin-left: 8px; display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: 18px; background: #FFFFFF; border: 1px solid #E3E7EF; opacity: 1; color: #101828; text-decoration: none; min-width: 0">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+<span style="display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: #5B6475"><span style="width: 10px; height: 10px; border-radius: 3px; background: #2F5BEA"></span>HS-210 · Tutorial</span>
+
+</div>
+<span style="font-size: 16px; font-weight: 700; line-height: 1.25">Technical Writing</span>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: #5B6475">
+<span style="display: flex; align-items: center; gap: 5px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Room 112</span>
+<span style="display: flex; align-items: center; gap: 5px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>Ms. Mahnoor Raza</span>
+</div>
+</a>
+</div>
+
+</div>
+</main>
+
+<nav aria-label="Main" style="display: flex; justify-content: space-around; align-items: flex-start; height: 84px; padding: 10px 6px 0; box-sizing: border-box; background: #FFFFFF; border-top: 1px solid #E3E7EF; flex-shrink: 0">
+<a href="Main.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; width: 66px; text-decoration: none; color: #5B6475; font-size: 11px; font-weight: 600"><span style="display: flex; padding: 4px 16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg></span>Home</a>
+<a href="Schedule.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; gap: 4px; width: 66px; text-decoration: none; color: #2F5BEA; font-size: 11px; font-weight: 700"><span style="display: flex; padding: 4px 16px; border-radius: 12px; background: #E6ECFD"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg></span>Schedule</a>
+<a href="Tasks.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; width: 66px; text-decoration: none; color: #5B6475; font-size: 11px; font-weight: 600"><span style="display: flex; padding: 4px 16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"></path><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></span>Tasks</a>
+<a href="Courses.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; width: 66px; text-decoration: none; color: #5B6475; font-size: 11px; font-weight: 600"><span style="display: flex; padding: 4px 16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"></path><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"></path></svg></span>Courses</a>
+<a href="Notices.dc.html" style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 4px; width: 66px; text-decoration: none; color: #5B6475; font-size: 11px; font-weight: 600"><span style="display: flex; padding: 4px 16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg></span>Notices<span style="position: absolute; top: -4px; left: 38px; min-width: 20px; height: 20px; padding: 0 5px; box-sizing: border-box; border-radius: 10px; background: #C9412A; color: #FFFFFF; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 2px solid #FFFFFF">2</span></a>
+</nav>
+</div>
+</div>
+</body>
+</html>

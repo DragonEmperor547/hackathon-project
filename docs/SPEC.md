@@ -33,7 +33,7 @@ All non-root screens have a back button; the Notices tab also has one (goes back
 At-a-glance view of the student's day. **Not a static welcome screen.**
 - Header: date (e.g. "FRIDAY, 9 OCTOBER"), greeting by time of day + first name, bell button with unread dot → Notices, avatar → Settings.
 - **Next class hero card**: course name, time range, room, "in 25 min" / "now" / "Next: Mon 08:30" (if no more classes today). Tap → Class detail.
-- **Stats row**: progress ring "X of Y tasks done" (this week) → Tasks; mini list: N pending, N unread notices, N classes today.
+- **Stats row**: progress ring "X of Y tasks done" (tasks due within ±7 days, labelled "this week") → Tasks; mini list: N pending, N unread notices, N classes today.
 - **Today's classes**: horizontal cards (done = faded, next = highlighted border). "Full schedule" → Schedule.
 - **Due soon**: up to 3 pending tasks sorted by due date, each with a tappable checkbox (completes in place) and due pill. "All tasks" → Tasks. Tap row → Task detail.
 - Empty states: "No classes today 🎉"-style message without emoji (use an icon), "Nothing due — you're all caught up".
@@ -104,6 +104,12 @@ Acceptance:
 3. **Dark mode** — Settings toggle: System / Light / Dark, using the Night Library tokens.
 4. **Notice → task** — "Add to tasks" on notice detail.
 5. Focus timer (25-min Pomodoro on Task detail) or attendance tracker — only if time remains.
+
+## Adding features later
+- Put them inside existing screens (Home sections, detail screens, Settings). Five tabs is the maximum.
+- A good feature reads data other screens already show and writes back to the store, so the change appears everywhere.
+- Store/type rules for additions: "Adding mutable data later" in DATA_MODEL.md.
+- Backlog (after the core is done): "Add task for this course" (task-form?courseId=), attendance tracker on Class detail, grade calculator from grading weights, swipe-to-complete rows, local due reminders (risky in Expo Go).
 
 ## Out of scope
 Timetable editing · course registration / admin panel · real notifications or staff publishing · login · backend.

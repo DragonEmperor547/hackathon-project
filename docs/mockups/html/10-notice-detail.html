@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus Companion mockup: Notice detail</title>
+<!--
+  Campus Companion UI mockup — Notice detail
+  Build target: app/notice/[id].tsx
+  Static reference only (no app logic). Match layout, hierarchy, spacing, colours and shapes.
+  Colours map to theme tokens in docs/DESIGN.md. Data shown is the mock data in docs/DATA_MODEL.md.
+  Phone frame is 390 px wide; build with flexible widths in React Native, not fixed pixels.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+
+body{margin:0}
+a{color:#2F5BEA}a:hover{color:#1E3FAE}
+
+html, body { margin: 0; }
+body { background: #CDD3DE; display: flex; justify-content: center; padding: 32px 16px; }
+.phone-frame { border-radius: 40px; overflow: hidden; box-shadow: 0 20px 60px rgba(16,24,40,0.25); }
+</style>
+</head>
+<body>
+<div class="phone-frame">
+<div style="width: 390px; height: 900px; box-sizing: border-box; background: #FFFFFF; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #101828; display: flex; flex-direction: column; overflow: hidden">
+<main style="flex: 1; padding: 52px 20px 16px; display: flex; flex-direction: column; gap: 18px; min-height: 0">
+
+<div style="display: flex; justify-content: space-between; align-items: center">
+<a href="Notices.dc.html" aria-label="Back to notices" style="width: 44px; height: 44px; border-radius: 22px; background: #F3F5F9; color: #101828; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg></a>
+<span role="status" style="display: flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: 999px; background: #E0F4F1; color: #0B6E63; font-size: 12px; font-weight: 700"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>Marked as read</span>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span style="align-self: flex-start; display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: #FDECE8; color: #B23A25; font-size: 12px; font-weight: 700"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M14 3v6h6"></path></svg>Exam update</span>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 27px; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em">Midterm revised: OS paper moved to Fri, 16 Oct</h1>
+<div style="display: flex; align-items: center; gap: 10px">
+<span style="display: flex; width: 36px; height: 36px; border-radius: 18px; background: #101828; color: #FFFFFF; align-items: center; justify-content: center; font-size: 13px; font-weight: 700">EO</span>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 700">Examinations Office</span><span style="font-size: 12px; color: #5B6475">Fri, 9 Oct · 9:20 AM</span></span>
+</div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 10px; padding: 16px; border-radius: 20px; background: #F3F5F9">
+<span style="flex: 1; display: flex; flex-direction: column; gap: 4px; padding: 12px; border-radius: 14px; background: #FFFFFF; opacity: 0.7"><span style="font-size: 11px; font-weight: 700; color: #5B6475; letter-spacing: 0.04em">WAS</span><span style="font-size: 15px; font-weight: 700; text-decoration: line-through">Wed, 14 Oct</span><span style="font-size: 12px; color: #5B6475">Exam Hall B</span></span>
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2343C4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 4px; padding: 12px; border-radius: 14px; background: #FFFFFF; border: 2px solid #2F5BEA"><span style="font-size: 11px; font-weight: 700; color: #2343C4; letter-spacing: 0.04em">NOW</span><span style="font-size: 15px; font-weight: 700">Fri, 16 Oct</span><span style="font-size: 12px; color: #3D4555">9:00 AM · Exam Hall A</span></span>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px; line-height: 1.65; color: #3D4555">
+<p style="margin: 0">The CS-305 Operating Systems midterm has been rescheduled because of the convocation on 14 October.</p>
+<p style="margin: 0">The paper will now be held on Friday, 16 October at 9:00 AM in Exam Hall A. Syllabus and duration (2 hours) stay the same. Bring your university ID card; entry closes 10 minutes after the start.</p>
+</div>
+</main>
+
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px 20px 30px; border-top: 1px solid #E3E7EF">
+<button style="height: 56px; border-radius: 16px; border: none; background: #2343C4; color: #FFFFFF; font-family: inherit; font-size: 16px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px">Add "Prepare for OS midterm" to Tasks</button>
+<span style="font-size: 12px; color: #5B6475; text-align: center">Creates a task due Thu, 15 Oct for CS-305.</span>
+</div>
+</div>
+</div>
+</body>
+</html>

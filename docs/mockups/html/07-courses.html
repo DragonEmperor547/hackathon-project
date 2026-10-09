@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus Companion mockup: My courses</title>
+<!--
+  Campus Companion UI mockup — My courses
+  Build target: app/(tabs)/courses.tsx
+  Static reference only (no app logic). Match layout, hierarchy, spacing, colours and shapes.
+  Colours map to theme tokens in docs/DESIGN.md. Data shown is the mock data in docs/DATA_MODEL.md.
+  Phone frame is 390 px wide; build with flexible widths in React Native, not fixed pixels.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+
+body{margin:0}
+a{color:#2F5BEA}a:hover{color:#1E3FAE}
+
+html, body { margin: 0; }
+body { background: #CDD3DE; display: flex; justify-content: center; padding: 32px 16px; }
+.phone-frame { border-radius: 40px; overflow: hidden; box-shadow: 0 20px 60px rgba(16,24,40,0.25); }
+</style>
+</head>
+<body>
+<div class="phone-frame">
+<div style="width: 390px; height: 900px; box-sizing: border-box; background: #F3F5F9; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #101828; display: flex; flex-direction: column; overflow: hidden">
+<main style="flex: 1; padding: 56px 20px 24px; display: flex; flex-direction: column; gap: 16px; min-height: 0">
+
+<header style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 12px; font-weight: 700; color: #5B6475; letter-spacing: 0.06em; text-transform: uppercase">Semester 5 · BS Computer Science</span>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -0.02em">My courses</h1>
+</header>
+
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+<div style="display: flex; flex-direction: column; gap: 2px; padding: 12px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E3E7EF"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700">5</span><span style="font-size: 12px; color: #5B6475">courses</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px; padding: 12px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E3E7EF"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700">16</span><span style="font-size: 12px; color: #5B6475">credit hours</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px; padding: 12px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E3E7EF"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700">14</span><span style="font-size: 12px; color: #5B6475">classes / week</span></div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+
+<a href="CourseDetail.dc.html" style="display: flex; gap: 14px; padding: 14px; border-radius: 20px; background: #FFFFFF; border: 1px solid #E3E7EF; color: #101828; text-decoration: none; align-items: center">
+<span style="display: flex; flex-shrink: 0; width: 52px; height: 52px; border-radius: 16px; background: #E0F4F1; color: #0B6E63; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-size: 16px; font-weight: 700">MA</span>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 4px; min-width: 0">
+<span style="font-size: 12px; font-weight: 700; color: #5B6475">CS-311 · 3 cr</span>
+<span style="font-size: 15px; font-weight: 700">Mobile App Development</span>
+<span style="font-size: 12px; color: #5B6475">Dr. Sana Iqbal · 2 pending</span>
+<span style="display: flex; align-items: center; gap: 8px; margin-top: 2px"><span style="flex: 1; height: 6px; border-radius: 3px; background: #EEF1F6; overflow: hidden"><span style="display: block; height: 6px; width: 33%; background: #0E9384; border-radius: 3px"></span></span><span style="font-size: 11px; font-weight: 700; color: #3D4555">1/3 done</span></span>
+</span>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA3B2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
+</a>
+
+<a href="CourseDetail.dc.html" style="display: flex; gap: 14px; padding: 14px; border-radius: 20px; background: #FFFFFF; border: 1px solid #E3E7EF; color: #101828; text-decoration: none; align-items: center">
+<span style="display: flex; flex-shrink: 0; width: 52px; height: 52px; border-radius: 16px; background: #EFEAFE; color: #5B3FD6; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-size: 16px; font-weight: 700">DB</span>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 4px; min-width: 0">
+<span style="font-size: 12px; font-weight: 700; color: #5B6475">CS-302 · 4 cr</span>
+<span style="font-size: 15px; font-weight: 700">Database Systems</span>
+<span style="font-size: 12px; color: #5B6475">Mr. Usman Tariq · 1 pending</span>
+<span style="display: flex; align-items: center; gap: 8px; margin-top: 2px"><span style="flex: 1; height: 6px; border-radius: 3px; background: #EEF1F6; overflow: hidden"><span style="display: block; height: 6px; width: 50%; background: #7A5AF8; border-radius: 3px"></span></span><span style="font-size: 11px; font-weight: 700; color: #3D4555">1/2 done</span></span>
+</span>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA3B2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
+</a>
+
+<a href="CourseDetail.dc.html" style="display: flex; gap: 14px; padding: 14px; border-radius: 20px; background: #FFFFFF; border: 1px solid #E3E7EF; color: #101828; text-decoration: none; align-items: center">
+<span style="display: flex; flex-shrink: 0; width: 52px; height: 52px; border-radius: 16px; background: #FDECE8; color: #B23A25; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-size: 16px; font-weight: 700">OS</span>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 4px; min-width: 0">
+<span style="font-size: 12px; font-weight: 700; color: #5B6475">CS-305 · 3 cr</span>
+<span style="font-size: 15px; font-weight: 700">Operating Systems</span>
+<span style="font-size: 12px; color: #5B6475">Dr. Farhan Ahmed · all caught up</span>
+<span style="display: flex; align-items: center; gap: 8px; margin-top: 2px"><span style="flex: 1; height: 6px; border-radius: 3px; background: #EEF1F6; overflow: hidden"><span style="display: block; height: 6px; width: 100%; background: #E2553C; border-radius: 3px"></span></span><span style="font-size: 11px; font-weight: 700; color: #3D4555">1/1 done</span></span>
+</span>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA3B2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
+</a>
+
+<a href="CourseDetail.dc.html" style="display: flex; gap: 14px; padding: 14px; border-radius: 20px; background: #FFFFFF; border: 1px solid #E3E7EF; color: #101828; text-decoration: none; align-items: center">
+<span style="display: flex; flex-shrink: 0; width: 52px; height: 52px; border-radius: 16px; background: #FDF1DC; color: #8A5300; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-size: 16px; font-weight: 700">PS</span>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 4px; min-width: 0">
+<span style="font-size: 12px; font-weight: 700; color: #5B6475">MT-201 · 3 cr</span>
+<span style="font-size: 15px; font-weight: 700">Probability &amp; Statistics</span>
+<span style="font-size: 12px; color: #5B6475">Ms. Hira Saleem · 1 pending</span>
+<span style="display: flex; align-items: center; gap: 8px; margin-top: 2px"><span style="flex: 1; height: 6px; border-radius: 3px; background: #EEF1F6; overflow: hidden"><span style="display: block; height: 6px; width: 0%; background: #D98A12; border-radius: 3px"></span></span><span style="font-size: 11px; font-weight: 700; color: #3D4555">0/1 done</span></span>
+</span>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA3B2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
+</a>
+
+<a href="CourseDetail.dc.html" style="display: flex; gap: 14px; padding: 14px; border-radius: 20px; background: #FFFFFF; border: 1px solid #E3E7EF; color: #101828; text-decoration: none; align-items: center">
+<span style="display: flex; flex-shrink: 0; width: 52px; height: 52px; border-radius: 16px; background: #E6ECFD; color: #2343C4; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-size: 16px; font-weight: 700">TW</span>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 4px; min-width: 0">
+<span style="font-size: 12px; font-weight: 700; color: #5B6475">HS-210 · 3 cr</span>
+<span style="font-size: 15px; font-weight: 700">Technical Writing</span>
+<span style="font-size: 12px; color: #5B6475">Ms. Mahnoor Raza · all caught up</span>
+<span style="display: flex; align-items: center; gap: 8px; margin-top: 2px"><span style="flex: 1; height: 6px; border-radius: 3px; background: #EEF1F6; overflow: hidden"><span style="display: block; height: 6px; width: 100%; background: #2F5BEA; border-radius: 3px"></span></span><span style="font-size: 11px; font-weight: 700; color: #3D4555">1/1 done</span></span>
+</span>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA3B2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
+</a>
+
+</div>
+</main>
+
+<nav aria-label="Main" style="display: flex; justify-content: space-around; align-items: flex-start; height: 84px; padding: 10px 6px 0; box-sizing: border-box; background: #FFFFFF; border-top: 1px solid #E3E7EF; flex-shrink: 0">
+<a href="Main.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; width: 66px; text-decoration: none; color: #5B6475; font-size: 11px; font-weight: 600"><span style="display: flex; padding: 4px 16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg></span>Home</a>
+<a href="Schedule.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; width: 66px; text-decoration: none; color: #5B6475; font-size: 11px; font-weight: 600"><span style="display: flex; padding: 4px 16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg></span>Schedule</a>
+<a href="Tasks.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; width: 66px; text-decoration: none; color: #5B6475; font-size: 11px; font-weight: 600"><span style="display: flex; padding: 4px 16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"></path><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></span>Tasks</a>
+<a href="Courses.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; gap: 4px; width: 66px; text-decoration: none; color: #2F5BEA; font-size: 11px; font-weight: 700"><span style="display: flex; padding: 4px 16px; border-radius: 12px; background: #E6ECFD"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"></path><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"></path></svg></span>Courses</a>
+<a href="Notices.dc.html" style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 4px; width: 66px; text-decoration: none; color: #5B6475; font-size: 11px; font-weight: 600"><span style="display: flex; padding: 4px 16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg></span>Notices<span style="position: absolute; top: -4px; left: 38px; min-width: 20px; height: 20px; padding: 0 5px; box-sizing: border-box; border-radius: 10px; background: #C9412A; color: #FFFFFF; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 2px solid #FFFFFF">2</span></a>
+</nav>
+</div>
+</div>
+</body>
+</html>

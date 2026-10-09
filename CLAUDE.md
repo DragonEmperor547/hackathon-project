@@ -59,7 +59,7 @@ src/
   types.ts
   data/student.ts courses.ts sessions.ts notices.ts seedTasks.ts
   store/useAppStore.ts
-  lib/selectors.ts dates.ts ids.ts
+  lib/selectors.ts dates.ts ids.ts useNow.ts
   theme/tokens.ts ThemeProvider.tsx
   components/*.tsx
 ```

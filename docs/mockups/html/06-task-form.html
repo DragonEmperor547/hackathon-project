@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus Companion mockup: Add / edit task</title>
+<!--
+  Campus Companion UI mockup — Add / edit task
+  Build target: app/task-form.tsx
+  Static reference only (no app logic). Match layout, hierarchy, spacing, colours and shapes.
+  Colours map to theme tokens in docs/DESIGN.md. Data shown is the mock data in docs/DATA_MODEL.md.
+  Phone frame is 390 px wide; build with flexible widths in React Native, not fixed pixels.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+
+body{margin:0}
+a{color:#2F5BEA}a:hover{color:#1E3FAE}
+
+html, body { margin: 0; }
+body { background: #CDD3DE; display: flex; justify-content: center; padding: 32px 16px; }
+.phone-frame { border-radius: 40px; overflow: hidden; box-shadow: 0 20px 60px rgba(16,24,40,0.25); }
+</style>
+</head>
+<body>
+<div class="phone-frame">
+<div style="width: 390px; height: 900px; box-sizing: border-box; background: #8C93A3; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #101828; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden">
+<div role="dialog" aria-label="New task" style="height: 830px; box-sizing: border-box; background: #FFFFFF; border-radius: 28px 28px 0 0; padding: 12px 20px 30px; display: flex; flex-direction: column; gap: 18px">
+<span style="align-self: center; width: 40px; height: 5px; border-radius: 3px; background: #DCE1EA"></span>
+<div style="display: flex; justify-content: space-between; align-items: center">
+<a href="Tasks.dc.html" aria-label="Back to tasks" style="width: 44px; height: 44px; border-radius: 22px; background: #F3F5F9; color: #101828; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg></a>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700">New task</h1>
+<span style="width: 44px"></span>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="tt" style="font-size: 13px; font-weight: 700">Title</label>
+<input id="tt" value="Read chapter 5: SQL joins" placeholder="e.g. Read chapter 5 notes" style="height: 50px; box-sizing: border-box; padding: 0 14px; border-radius: 14px; border: 1.5px solid #E3E7EF; background: #F7F8FB; font-family: inherit; font-size: 15px; color: #101828; outline: none">
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 700">Course</span>
+<div role="group" aria-label="Course" style="display: flex; flex-wrap: wrap; gap: 8px">
+
+<button aria-pressed="false" style="display: flex; align-items: center; gap: 6px; height: 40px; padding: 0 12px; border-radius: 999px; border: 1.5px solid #E3E7EF; background: #FFFFFF; color: #101828; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer"><span style="width: 10px; height: 10px; border-radius: 3px; background: #0E9384"></span>CS-311</button>
+
+<button aria-pressed="true" style="display: flex; align-items: center; gap: 6px; height: 40px; padding: 0 12px; border-radius: 999px; border: 1.5px solid #101828; background: #F3F5F9; color: #101828; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer"><span style="width: 10px; height: 10px; border-radius: 3px; background: #7A5AF8"></span>CS-302</button>
+
+<button aria-pressed="false" style="display: flex; align-items: center; gap: 6px; height: 40px; padding: 0 12px; border-radius: 999px; border: 1.5px solid #E3E7EF; background: #FFFFFF; color: #101828; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer"><span style="width: 10px; height: 10px; border-radius: 3px; background: #E2553C"></span>CS-305</button>
+
+<button aria-pressed="false" style="display: flex; align-items: center; gap: 6px; height: 40px; padding: 0 12px; border-radius: 999px; border: 1.5px solid #E3E7EF; background: #FFFFFF; color: #101828; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer"><span style="width: 10px; height: 10px; border-radius: 3px; background: #D98A12"></span>MT-201</button>
+
+<button aria-pressed="false" style="display: flex; align-items: center; gap: 6px; height: 40px; padding: 0 12px; border-radius: 999px; border: 1.5px solid #E3E7EF; background: #FFFFFF; color: #101828; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer"><span style="width: 10px; height: 10px; border-radius: 3px; background: #2F5BEA"></span>HS-210</button>
+
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="dd" style="font-size: 13px; font-weight: 700">Due date</label>
+<input id="dd" type="date" value="2026-10-11" style="height: 50px; box-sizing: border-box; padding: 0 12px; border-radius: 14px; border: 1.5px solid #E3E7EF; background: #F7F8FB; font-family: inherit; font-size: 14px; color: #101828">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="tm" style="font-size: 13px; font-weight: 700">Time</label>
+<input id="tm" type="time" value="23:59" style="height: 50px; box-sizing: border-box; padding: 0 12px; border-radius: 14px; border: 1.5px solid #E3E7EF; background: #F7F8FB; font-family: inherit; font-size: 14px; color: #101828">
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 700">Priority</span>
+<div role="group" aria-label="Priority" style="display: flex; padding: 4px; gap: 4px; border-radius: 14px; background: #EEF1F6">
+
+<button aria-pressed="false" style="flex: 1; height: 42px; border: none; border-radius: 10px; background: transparent; color: #3D4555; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px"><span style="width: 8px; height: 8px; border-radius: 4px; background: #9AA3B2"></span>Low</button>
+
+<button aria-pressed="true" style="flex: 1; height: 42px; border: none; border-radius: 10px; background: #FFFFFF; color: #101828; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px"><span style="width: 8px; height: 8px; border-radius: 4px; background: #D98A12"></span>Medium</button>
+
+<button aria-pressed="false" style="flex: 1; height: 42px; border: none; border-radius: 10px; background: transparent; color: #3D4555; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px"><span style="width: 8px; height: 8px; border-radius: 4px; background: #C9412A"></span>High</button>
+
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="nt" style="font-size: 13px; font-weight: 700">Notes <span style="font-weight: 500; color: #5B6475">(optional)</span></label>
+<textarea id="nt" rows="3" placeholder="Links, page numbers, group members…" style="box-sizing: border-box; padding: 12px 14px; border-radius: 14px; border: 1.5px solid #E3E7EF; background: #F7F8FB; font-family: inherit; font-size: 14px; color: #101828; resize: none"></textarea>
+</div>
+
+<span style="flex: 1"></span>
+<button aria-disabled="false" style="height: 56px; border-radius: 16px; border: none; background: #2343C4; color: #FFFFFF; font-family: inherit; font-size: 16px; font-weight: 700; cursor: pointer">Save task</button>
+</div>
+</div>
+</div>
+</body>
+</html>

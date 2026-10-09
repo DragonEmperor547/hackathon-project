@@ -105,12 +105,16 @@ interface AppState {
 Persist config:
 ```ts
 persist(..., {
-  name: 'campus-companion-v1',                 // bump to v2 to wipe saved data
+  name: 'campus-companion',                    // never rename: that wipes saved data
+  version: 1,                                  // bump when the persisted shape changes
+  migrate: (persisted, from) => persisted,     // give old saves defaults for new fields
   storage: createJSONStorage(() => AsyncStorage),
   partialize: (s) => ({ tasks: s.tasks, readNoticeIds: s.readNoticeIds, themeMode: s.themeMode }),
   onRehydrateStorage: () => () => useAppStore.setState({ hasHydrated: true }),
 })
 ```
+- **Adding mutable data later:** add the field + actions, add it to `partialize`, bump `version`, and default it in `migrate` (e.g. `if (from < 2) p.attendance = {}`).
+- **New fields on existing types are always optional** (`field?:`) so older saved data stays valid.
 - Root layout shows the splash screen until `hasHydrated && fontsLoaded`.
 - IDs: `src/lib/ids.ts` → `` `t_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 6)}` ``.
 - New tasks are prepended; lists sort by `dueAt` anyway.
@@ -126,7 +130,7 @@ classStatus(session, now): 'done' | 'now' | 'next' | 'later'   // only meaningfu
 getNextClass(now): { session, startsInMin, isToday, isNow } | null   // looks ahead into next days
 pendingTasks(tasks) / completedTasks(tasks)             // pending sorted by dueAt asc, completed by completedAt desc
 dueSoon(tasks, now, limit = 3)                          // pending, sorted by dueAt
-weekProgress(tasks, now): { done, total, pct }          // tasks due in current Mon–Sun week + overdue pending
+weekProgress(tasks, now): { done, total, pct }          // tasks due within ±7 days of now (rolling window, so seed data reads "4 of 8" any day)
 tasksForCourse(tasks, courseId)
 unreadCount(readIds) / isUnread(id, readIds)
 ```
@@ -139,6 +143,7 @@ formatRelative(iso, now)     // "2h ago", "Yesterday", "6 Oct"
 greeting(now)                // "Good morning" / "Good afternoon" / "Good evening"
 toTodayAt(day: Weekday, hhmm, now): Date   // for countdowns
 ```
+`src/lib/useNow.ts`: `useNow(intervalMs = 60_000): Date` re-renders every minute so "in 25 min", "Now" and done/next states stay live. Use it on Home, Schedule, Class detail and Task detail instead of calling `new Date()` in render.
 
 ## Mock data (write to `src/data/`)
 Use these exact values so the app matches the mockups.
